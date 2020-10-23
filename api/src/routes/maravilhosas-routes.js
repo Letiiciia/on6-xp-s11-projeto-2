@@ -6,13 +6,16 @@ const cors = require("cors");
 //get /maravilhosas
 router.get("/maravilhosas",cors(), controller.getMaravilhosas);
 
-//post /maravilhosas
+//get /maravilhosas/id
 router.get("/maravilhosas/:id", cors(), controller.getMaravilhosaById);
 
-//get /maravilhosas/id
+//post /maravilhosas
+router.post("/maravilhosa/", cors(), controller.addMaravailhosa);
 
 //put /maravilhosas/id
 router.put("/maravilhosas/:id", cors(), controller.updateMaravilhosa);
+
 //delete /maravilhosas/id
+router.delete("/maravilhosas/:id", cors(), controller.deleteMaravilhosa);
 
 module.exports = router;
